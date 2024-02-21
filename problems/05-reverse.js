@@ -14,7 +14,12 @@ reverse(""); // ""
 
 
 function reverse(str) {
-  // Your code here 
+  // Your code here
+  if(str.length === 0){
+    return ""
+  }
+  let newStr = str[str.length-1];
+  return newStr + reverse(str.slice(0, str.length-1))
 }
 
 
